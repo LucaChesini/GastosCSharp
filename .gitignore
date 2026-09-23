@@ -1,0 +1,34 @@
+docs/
+.claude/
+CLAUDE.md
+
+# Build .NET
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+artifacts/
+
+# Testes
+TestResults/
+
+# IDE
+*.user
+*.suo
+.vs/
+.idea/
+
+# Logs de build
+*.binlog
+msbuild.log
+
+# NuGet
+*.nupkg
+project.lock.json
+
+# Configuracao local
+appsettings.*.local.json
+appsettings.Development.json
+.env
+.env.*
+!.env.example
