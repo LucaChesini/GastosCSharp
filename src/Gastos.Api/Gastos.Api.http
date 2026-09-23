@@ -4,3 +4,70 @@ GET {{Gastos.Api_HostAddress}}/health
 Accept: application/json
 
 ###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/categorias
+Accept: application/json
+
+###
+
+POST {{Gastos.Api_HostAddress}}/api/v1/categorias
+Content-Type: application/json
+
+{
+  "nome": "Mercado",
+  "cor": "#2E7D32"
+}
+
+###
+
+PUT {{Gastos.Api_HostAddress}}/api/v1/categorias/1
+Content-Type: application/json
+
+{
+  "nome": "Supermercado",
+  "cor": "#1B5E20"
+}
+
+###
+
+DELETE {{Gastos.Api_HostAddress}}/api/v1/categorias/1
+
+###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/despesas
+Accept: application/json
+
+###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/despesas/1
+Accept: application/json
+
+###
+
+POST {{Gastos.Api_HostAddress}}/api/v1/despesas
+Content-Type: application/json
+
+{
+  "descricao": "Compra do mês",
+  "valor": 412.37,
+  "data": "2026-09-20",
+  "categoriaId": 1
+}
+
+###
+
+PUT {{Gastos.Api_HostAddress}}/api/v1/despesas/1
+Content-Type: application/json
+
+{
+  "descricao": "Compra do mês corrigida",
+  "valor": 398.10,
+  "data": "2026-09-20",
+  "categoriaId": 1
+}
+
+###
+
+DELETE {{Gastos.Api_HostAddress}}/api/v1/despesas/1
+
+###
