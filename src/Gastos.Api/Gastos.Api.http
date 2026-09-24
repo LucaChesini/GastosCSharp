@@ -34,6 +34,24 @@ DELETE {{Gastos.Api_HostAddress}}/api/v1/categorias/1
 
 ###
 
+GET {{Gastos.Api_HostAddress}}/api/v1/tags
+Accept: application/json
+
+###
+
+POST {{Gastos.Api_HostAddress}}/api/v1/tags
+Content-Type: application/json
+
+{
+  "nome": "Viagem"
+}
+
+###
+
+DELETE {{Gastos.Api_HostAddress}}/api/v1/tags/1
+
+###
+
 GET {{Gastos.Api_HostAddress}}/api/v1/despesas
 Accept: application/json
 
@@ -51,7 +69,8 @@ Content-Type: application/json
   "descricao": "Compra do mês",
   "valor": 412.37,
   "data": "2026-09-20",
-  "categoriaId": 1
+  "categoriaId": 1,
+  "tagIds": [1, 2]
 }
 
 ###
@@ -63,8 +82,23 @@ Content-Type: application/json
   "descricao": "Compra do mês corrigida",
   "valor": 398.10,
   "data": "2026-09-20",
-  "categoriaId": 1
+  "categoriaId": 1,
+  "tagIds": [2, 3]
 }
+
+###
+
+PUT {{Gastos.Api_HostAddress}}/api/v1/despesas/1/comprovante
+Content-Type: application/json
+
+{
+  "url": "https://exemplo.com/recibos/compra-do-mes.pdf",
+  "observacao": "Nota fiscal"
+}
+
+###
+
+DELETE {{Gastos.Api_HostAddress}}/api/v1/despesas/1/comprovante
 
 ###
 
