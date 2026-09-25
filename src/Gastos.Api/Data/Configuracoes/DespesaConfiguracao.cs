@@ -21,6 +21,9 @@ public sealed class DespesaConfiguracao : IEntityTypeConfiguration<Despesa>
 
         builder.Property(d => d.Valor).HasPrecision(18, 2);
 
+        builder.HasIndex(d => d.Data)
+            .IncludeProperties(d => new { d.CategoriaId, d.Valor });
+
         builder.HasOne(d => d.Categoria)
             .WithMany(c => c.Despesas)
             .HasForeignKey(d => d.CategoriaId)

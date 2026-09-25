@@ -10,6 +10,7 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
     public DbSet<Despesa> Despesas => Set<Despesa>();
     public DbSet<Tag> Tags => Set<Tag>();
     public DbSet<Comprovante> Comprovantes => Set<Comprovante>();
+    public DbSet<LinhaRelatorioMensal> RelatorioMensal => Set<LinhaRelatorioMensal>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

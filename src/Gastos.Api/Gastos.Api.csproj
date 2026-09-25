@@ -14,4 +14,8 @@
     <PackageReference Include="Scalar.AspNetCore" Version="2.17.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\sql\vw_*.sql;..\..\sql\sp_*.sql" LogicalName="Gastos.Api.Sql.%(Filename)%(Extension)" />
+  </ItemGroup>
+
 </Project>

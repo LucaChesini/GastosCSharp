@@ -20,6 +20,7 @@ builder.Services.AddScoped<CategoriaService>();
 builder.Services.AddScoped<DespesaService>();
 builder.Services.AddScoped<TagService>();
 builder.Services.AddScoped<ComprovanteService>();
+builder.Services.AddScoped<RelatorioService>();
 
 var app = builder.Build();
 
@@ -35,5 +36,6 @@ app.MapCategoriaEndpoints();
 app.MapTagEndpoints();
 app.MapDespesaEndpoints();
 app.MapComprovanteEndpoints();
+app.MapRelatorioEndpoints();
 
 app.Run();

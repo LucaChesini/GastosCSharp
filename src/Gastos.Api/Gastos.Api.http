@@ -105,3 +105,18 @@ DELETE {{Gastos.Api_HostAddress}}/api/v1/despesas/1/comprovante
 DELETE {{Gastos.Api_HostAddress}}/api/v1/despesas/1
 
 ###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/relatorios/mensal?ano=2026&mes=9
+Accept: application/json
+
+###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/relatorios/mensal?ano=2020&mes=1
+Accept: application/json
+
+###
+
+GET {{Gastos.Api_HostAddress}}/api/v1/relatorios/mensal?ano=2026&mes=13
+Accept: application/json
+
+###
